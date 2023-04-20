@@ -115,7 +115,7 @@ def get_events(url,name,vi_tri,level):
 
     obj1 = employee()
 
-    #cap = cv2.VideoCapture("rtsp://admin:@172.16.0.3:554/live/0/MAIN")
+    #cap = cv2.VideoCapture("YOUR_URL")
     cap = cv2.VideoCapture(url)
 
     width= int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -185,7 +185,7 @@ def get_events(url,name,vi_tri,level):
     #     lst_path[4]=lst_path[9]
 
 
-#a=  threading.Thread(target=get_events,args=("rtsp://admin:@172.16.0.3:554/live/0/MAIN","hello","cong",1800000,"q")).start()
+#a=  threading.Thread(target=get_events,args=("YOUR_URL","hello","cong",1800000,"q")).start()
 
 t = threading.Thread(target=get_events,args=(0,"cam","webcam",100000)).start()
 
